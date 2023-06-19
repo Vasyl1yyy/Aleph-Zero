@@ -1,0 +1,128 @@
+:root {
+  --color-bg: #111B24;
+  --color-text: #BCCBD6;
+  --color-text-title: #fff;
+  --color-elemet-blue: #00EAC7;
+  --color-elemet-black-blue: #0F3034;
+
+  --index: calc(1vw + 1vh);
+
+  --font-text: 'Karla', sans-serif;
+  --font-title: 'Inter', sans-serif;
+  --size-text: calc(var(--index) * .7);
+}
+
+* {
+  font-family: var(--font-text);
+  color: var(--color-text);
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+button {
+  all: unset;
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+/* BTN */
+
+.btn-blue {
+  font-family: var(--font-title);
+  font-weight: 500;
+  font-size: var(--size-text);
+  background-color: var(--color-elemet-blue);
+  color: var(--color-elemet-black-blue);
+  border-radius: 40px;
+  padding: calc(var(--index) * .5) calc(var(--index) * 1);
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.btn-black {
+  font-family: var(--font-title);
+  font-weight: 500;
+  font-size: var(--size-text);
+  background-color: var(--color-elemet-black-blue);
+  color: var(--color-elemet-blue);
+  border-radius: 40px;
+  padding: calc(var(--index) * .5) calc(var(--index) * 1);
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.btn-blue:hover {
+  box-shadow: 0 0 10px 100px var(--color-elemet-black-blue) inset;
+  color: var(--color-elemet-blue);
+}
+
+.btn-black:hover {
+  box-shadow: 0 0 10px 100px var(--color-elemet-blue) inset;
+  color: var(--color-elemet-black-blue);
+}
+
+/* CONTAINER */
+
+.container {
+  margin: 0 calc(var(--index) * 6);
+}
+
+/* NAVBAR */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: calc(var(--index) * .4);
+}
+
+.nav img {
+  width: calc(var(--index) * 8);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-gap: 16px;
+  font-size: var(--size-text);
+}
+
+.menu a {
+  transition: all .5s;
+  position: relative;
+}
+
+.menu a::after {
+  content: '';
+  height: 2px;
+  display: block;
+  background-color: var(--color-elemet-blue);
+  margin-top: -5px;
+  transition: all .5s;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.menu a:hover::after {
+  margin-top: 2px;
+  opacity: 1;
+  width: 100%;
+}
+
+.menu a:hover {
+  color: var(--color-elemet-blue);
+}
+
+@media all and (max-width:800px) {
+  .container {
+    margin: 0 calc(var(--index) * 2);
+  }
+}
