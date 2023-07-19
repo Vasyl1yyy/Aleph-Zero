@@ -195,12 +195,22 @@ body {
 
 .header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80%;
+}
+
+header {
+  background-image: url(../img/header-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 98vh;
 }
 
 .header-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .download {
@@ -212,6 +222,31 @@ body {
 
 .header-btn:hover > .download {
   color: var(--color-elemet-black-blue);
+}
+
+.header-left-title span {
+  font-weight: 300;
+  font-size: var(--size-title);
+  font-family: var(--font-title);
+  color: var(--color-text-title);
+}
+
+.header-left-title::after {
+  content: "";
+  background-color: var(--color-elemet-blue);
+  height: 2px;
+  width: 60px;
+  display: block;
+  margin-top: calc(var(--index) * 1.2);
+}
+
+.header-left-p {
+  margin: calc(var(--index) * 1.2) 0;
+  width: 30vw;
+}
+
+.header-right img {
+  width: calc(var(--index) * 14);
 }
 
 @media all and (max-width:800px) {
