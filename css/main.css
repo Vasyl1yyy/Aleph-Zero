@@ -12,6 +12,7 @@
   --size-text: calc(var(--index) * .7);
   --size-text-800px: calc(var(--index) * 1);
   --size-text-500px: calc(var(--index) * 1.4);
+  --size-title: calc(var(--index) * 2);
 }
 
 * {
@@ -32,6 +33,13 @@ button {
 
 body {
   background-color: var(--color-bg);
+}
+
+.title {
+  font-size: var(--size-title);
+  font-family: var(--font-title);
+  color: var(--color-text-title);
+  font-weight: 700;
 }
 
 /* BTN */
@@ -132,10 +140,13 @@ body {
 
 .nav-mob-activ {
   display: none;
+  position: absolute;
+  width: 100%;
   opacity: 0;
-  background-color: #111b2475;
+  background-color: #111b24e8;
   height: 100vh;
   transition: all 0.5s;
+  z-index: 10;
 }
 
 .menu-mob {
@@ -180,6 +191,27 @@ body {
 
 .anim-nav a:hover {
   color: var(--color-elemet-blue);
+}
+
+.header {
+  display: flex;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download {
+  color: var(--color-elemet-blue);
+  font-size: calc(var(--index) * 1);
+  margin-right: 5px;
+  transition: all .5s;
+}
+
+.header-btn:hover > .download {
+  color: var(--color-elemet-black-blue);
 }
 
 @media all and (max-width:800px) {
