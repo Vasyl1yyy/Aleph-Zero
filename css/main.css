@@ -275,6 +275,23 @@ header {
   .menu, .btn-menu {
     display: none;
   }
+  .header {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .header-left {
+    text-align: center;
+  }
+  .header-left-title::after,
+  .header-btn,
+  .header-left-title,
+  .header-left-p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header-left-p {
+    width: calc(var(--index) * 28);
+  }
 }
 
 @media all and (max-width:500px) {
