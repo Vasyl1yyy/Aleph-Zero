@@ -351,6 +351,69 @@ header {
   margin-top: calc(var(--index) * 1);
 }
 
+.carts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart {
+  border: 1px solid #1B2B38;
+  background: linear-gradient(180deg, #14202A 0%, rgba(20, 32, 42, 0.00) 100%);
+  margin: 0 10px;
+  margin-top: calc(var(--index) * 4);
+  width: calc(var(--index) * 25);
+}
+
+.cart img {
+  width: calc(var(--index) * 25);
+}
+
+.cart-title {
+  color: var(--color-text-title);
+  font-family: var(--font-title);
+  font-size: calc(var(--index) * 1);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cart-title span {
+  color: var(--color-text-title);
+  font-family: var(--font-title);
+  font-size: calc(var(--index) * .8);
+  font-weight: 300;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.cart-line {
+  background-color: var(--color-elemet-blue);
+  height: 25px;
+  width: 2px;
+  margin-right: 10px;
+  margin-left: 40px;
+}
+
+.cart p {
+  margin: 20px 40px;
+}
+
+.cart a {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: var(--color-elemet-blue);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.cart ion-icon {
+  color: var(--color-elemet-blue);
+  font-size: calc(var(--index) * .9);
+}
+
 @media all and (max-width:800px) {
   * {
     font-size: var(--size-text-800px);
@@ -397,6 +460,9 @@ header {
   .featured-title {
     font-size: calc(var(--index) * .7);
   }
+  .carts {
+    flex-direction: column;
+  }
 }
 
 @media all and (max-width:500px) {
@@ -411,5 +477,23 @@ header {
   }
   .nav img {
     width: calc(var(--index) * 10);
+  }
+  .cart-title {
+    color: var(--color-text-title);
+    font-family: var(--font-title);
+    font-size: calc(var(--index) * 1.5);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .cart-title span {
+    color: var(--color-text-title);
+    font-family: var(--font-title);
+    font-size: calc(var(--index) * 1);
+    font-weight: 300;
+    margin-top: 3px;
+    margin-left: 5px;
   }
 }
