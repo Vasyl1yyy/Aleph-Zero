@@ -409,7 +409,7 @@ header {
   margin-bottom: 10px;
 }
 
-.cart ion-icon {
+.cart ion-icon, .bild-text ion-icon {
   color: var(--color-elemet-blue);
   font-size: calc(var(--index) * .9);
 }
@@ -448,6 +448,57 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 42%;
+}
+
+.bild {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--index) * 5);
+}
+
+.bilds {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #1B2B38;
+  background: linear-gradient(180deg, #14202A 0%, rgba(20, 32, 42, 0.00) 100%);
+  position: relative;
+}
+
+.bild-text p {
+  font-size: calc(var(--index) * 1.5);
+  color: var(--color-text-title);
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+.bild-text span {
+  font-size: calc(var(--index) * 1.5);
+  color: var(--color-text-title);
+  font-weight: 700;
+}
+
+.bild-line {
+  width: 2px;
+  height: calc(var(--index) * 4.5);
+  background-color: var(--color-elemet-blue);
+  margin: 30px 20px;
+}
+
+.bild-text a {
+  color: var(--color-elemet-blue);
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.bild-text a ion-icon {
+  margin-left: 5px; /* Додатковий відступ між текстом і іконкою */
+}
+
+.bilds img {
+  width: calc(var(--index) * 15);
 }
 
 @media all and (max-width:800px) {
