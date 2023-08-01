@@ -494,11 +494,57 @@ header {
 }
 
 .bild-text a ion-icon {
-  margin-left: 5px; /* Додатковий відступ між текстом і іконкою */
+  margin-left: 5px;
 }
 
 .bilds img {
   width: calc(var(--index) * 15);
+}
+
+.drive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc(var(--index) * 5);
+}
+
+.drive-text {
+  margin-right: 60px;
+}
+
+.drive h2::after {
+  content: "";
+  display: block;
+  background-color: var(--color-elemet-blue);
+  width: 80px;
+  height: 2px;
+  margin-top: 20px;
+}
+
+.drive p {
+  margin: calc(var(--index) * 1.5) 0;
+}
+
+.drive-cart {
+  display: flex;
+  align-items: center;
+  border: 1px solid #1B2B38;
+  background: linear-gradient(180deg, #14202A 0%, rgba(20, 32, 42, 0.00) 100%);
+  padding: 0 10px;
+  width: calc(var(--index) * 20);
+  margin: 10px 0;
+}
+
+.drive-cart img {
+  width: calc(var(--index) * 3);
+}
+
+.cart-one {
+  opacity: .2;
+}
+
+.cart-two {
+  opacity: .5;
 }
 
 @media all and (max-width:800px) {
@@ -560,6 +606,19 @@ header {
   }
   .stati {
     margin: 0 20px;
+  }
+  .drive {
+    flex-direction: column;
+    text-align: center;
+    margin-top: calc(var(--index) * 4);
+    margin-bottom:  calc(var(--index) * 4);
+  }
+  .drive h2::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .drive-text {
+    margin-right: 0;
   }
 }
 
