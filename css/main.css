@@ -571,6 +571,97 @@ header {
   margin-top: 20px;
 }
 
+.azero {
+  background-image: url(../img/bg-azero.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: calc(var(--index) * 3);
+}
+
+.azero-carts {
+  padding: calc(var(--index) * 5) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.azero-cart {
+  border: 1px solid #1B2B38;
+  background: linear-gradient(180deg, #14202A 0%, rgba(20, 32, 42, 0.00) 100%);
+  position: relative;
+  margin: 0 calc(var(--index) * .3);
+  width: calc(var(--index) * 15);
+  height: calc(var(--index) * 13);
+}
+
+.azero-img {
+  height: calc(var(--index) * 4);
+  margin-top: calc(var(--index) * .5);
+  margin-left: calc(var(--index) * .8);
+  position: relative;
+  z-index: 1;
+}
+
+.azero-bg {
+  position: absolute;
+  z-index: 0;
+  width: calc(var(--index) * 15);
+}
+
+.azero-cart h3 {
+  color: var(--color-text-title);
+  font-size: calc(var(--index) * 1);
+  font-family: var(--font-title);
+  position: relative;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.azero-cart h3::after {
+  content: "";
+  background-color: var(--color-elemet-blue);
+  width: 2px;
+  height: calc(var(--index) * 1);
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: -10px;
+}
+
+.azero-cart span {
+  color: var(--color-text-title);
+  font-size: calc(var(--index) * 1);
+  font-weight: 700;
+  font-family: var(--font-title);
+}
+
+.azero-cart p {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-right: 25px;
+}
+
+.azero-cart-btn {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  color: var(--color-elemet-blue);
+  background-color: var(--color-elemet-black-blue);
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.azero-cart-btn ion-icon {
+  color: var(--color-elemet-blue);
+}
+
 @media all and (max-width:800px) {
   * {
     font-size: var(--size-text-800px);
@@ -644,6 +735,40 @@ header {
   .drive-text {
     margin-right: 0;
   }
+  .azero-carts {
+    flex-direction: column;
+  }
+
+  .azero-cart {
+    margin: calc(var(--index) * 2) 0;
+    width: calc(var(--index) * 30);
+    height: calc(var(--index) * 20);
+  }
+
+  .azero-bg {
+    width: calc(var(--index) * 30);
+  }
+
+  .azero {
+    background-image: none;
+  }
+
+  .azero-img {
+    height: calc(var(--index) * 8);
+  }
+
+  .azero-cart h3 {
+    font-size: calc(var(--index) * 1.5);
+  }
+  
+  .azero-cart span {
+    font-size: calc(var(--index) * 1.5);
+  }
+
+  .azero-cart h3::after {
+    height: calc(var(--index) * 1.5);
+  }
+
 }
 
 @media all and (max-width:500px) {
