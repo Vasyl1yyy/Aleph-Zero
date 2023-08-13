@@ -609,7 +609,7 @@ header {
   width: calc(var(--index) * 15);
 }
 
-.azero-cart h3 {
+.azero-cart h3, .footer-be h3 {
   color: var(--color-text-title);
   font-size: calc(var(--index) * 1);
   font-family: var(--font-title);
@@ -619,7 +619,7 @@ header {
   margin-top: 10px;
 }
 
-.azero-cart h3::after {
+.azero-cart h3::after, .footer-be h3::after {
   content: "";
   background-color: var(--color-elemet-blue);
   width: 2px;
@@ -630,7 +630,7 @@ header {
   left: -10px;
 }
 
-.azero-cart span {
+.azero-cart span, .footer-be span {
   color: var(--color-text-title);
   font-size: calc(var(--index) * 1);
   font-weight: 700;
@@ -661,6 +661,145 @@ header {
 .azero-cart-btn ion-icon {
   color: var(--color-elemet-blue);
 }
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: calc(var(--index) * 5);
+}
+
+.footer a {
+  display: block;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+}
+
+.footer-be h3 {
+  margin-left: 10px;
+}
+
+.footer-be p {
+  margin: calc(var(--index) * 1) 0;
+}
+
+.footer-social a {
+  margin: 0 calc(var(--index) * .5);
+}
+
+.footer-input-btn {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-input-btn input {
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: var(--color-bg);
+}
+
+.block {
+  margin: 0 calc(var(--index) * .4);
+}
+
+.block a {
+  margin: calc(var(--index) * .5) 0;
+  transition: all .2s;
+}
+
+.block a:hover {
+  color: var(--color-elemet-blue);
+}
+
+.footer-be {
+  width: calc(var(--index) * 15);
+}
+
+.block p {
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: .8;
+  margin-top: calc(var(--index) * 2);
+}
+
+.block p.a-title {
+  color: var(--color-text-title);
+  font-weight: 500;
+  margin-bottom: calc(var(--index) * .5);
+  margin-top: 0;
+  font-family: var(--font-text);
+  text-transform: none;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.btn-mail {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-elemet-blue);
+  color: var(--color-bg-blue);
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-family: var(--font-title);
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+.btn-mail ion-icon {
+  color: var(--color-bg-blue);
+  font-size: calc(var(--index) * .8);
+  margin-right: 2px;
+}
+
+.footer-input {
+  display: flex;
+  align-items: center;
+}
+
+.footer-input input {
+  background-color: var(--color-bg);
+  border-style: none;
+  border: 1px solid var(--color-elemet-black-blue);
+  padding: 4px;
+  width: 300px;
+  outline: none;
+  font-size: calc(var(--index) * .7);
+}
+
+.footer-block {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  display: flex;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-elemet-black-blue);
+  cursor: pointer;
+  border-radius: 3px;
+  color: var(--color-bg);
+  margin-right: 5px;
+}
+
+label ion-icon {
+  color: var(--color-bg);
+  font-size: calc(var(--index) * .6);
+  transition: all .2s;
+}
+
+input[type="checkbox"]:checked + label ion-icon{
+  color: var(--color-elemet-blue);
+}
+
 
 @media all and (max-width:800px) {
   * {
@@ -757,16 +896,45 @@ header {
     height: calc(var(--index) * 8);
   }
 
-  .azero-cart h3 {
+  .azero-cart h3, .footer-be h3 {
     font-size: calc(var(--index) * 1.5);
   }
   
-  .azero-cart span {
+  .azero-cart span, .footer-be span {
     font-size: calc(var(--index) * 1.5);
   }
 
-  .azero-cart h3::after {
+  .azero-cart h3::after , .footer-be h3::after {
     height: calc(var(--index) * 1.5);
+  }
+
+  .footer-block {
+    margin-top: calc(var(--index) * 2);
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-be {
+    width: auto;
+  }
+
+  .footer-input {
+    justify-content: center;
+  }
+
+  .footer-input input {
+    font-size: calc(var(--index) * 1);
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  label ion-icon {
+    font-size: calc(var(--index) * .8);
   }
 
 }
@@ -803,6 +971,20 @@ header {
   }
 
   .stati h3 {
+    font-size: calc(var(--index) * 1.5);
+  }
+
+  .footer-social img {
+    width: calc(var(--index) * 2);
+  }
+
+  .footer-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .footer-input input {
     font-size: calc(var(--index) * 1.5);
   }
 }
