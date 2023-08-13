@@ -874,18 +874,22 @@ input[type="checkbox"]:checked + label ion-icon{
   .drive-text {
     margin-right: 0;
   }
+
+  .bild {
+    display: none;
+  }
   .azero-carts {
     flex-direction: column;
   }
 
   .azero-cart {
     margin: calc(var(--index) * 2) 0;
-    width: calc(var(--index) * 30);
-    height: calc(var(--index) * 20);
+    width: calc(var(--index) * 25);
+    height: calc(var(--index) * 25);
   }
 
   .azero-bg {
-    width: calc(var(--index) * 30);
+    width: calc(var(--index) * 25);
   }
 
   .azero {
