@@ -921,6 +921,10 @@ input[type="checkbox"]:checked + label ion-icon{
     width: auto;
   }
 
+  .footer-input input {
+    width: 200px;
+  }
+
   .footer-input {
     justify-content: center;
   }
