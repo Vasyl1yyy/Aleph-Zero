@@ -818,6 +818,45 @@ input[type="checkbox"]:checked + label ion-icon{
   color: var(--color-elemet-blue);
 }
 
+/* ERROR */
+
+.error {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 12;
+  background-color: #111b24e8;
+  height: 100vh;
+  width: 100vw;
+  margin-top: -9px;
+}
+
+.error-block {
+  position: relative;
+  text-align: center;
+  padding: calc(var(--index) * 2) calc(var(--index) * 4);
+  background-color: var(--color-bg-blue);
+  border-radius: 12px;
+}
+
+.error h3 {
+  color: var(--color-elemet-black-blue);
+  font-size: calc(var(--index) * 4);
+}
+
+.error p {
+  margin: calc(var(--index) * 1) 0;
+}
+
+.error-close {
+  position: absolute;
+  font-size: calc(var(--index) * 1.2);
+  right: calc(var(--index) * .2);
+  top: calc(var(--index) * .2);
+  cursor: pointer;
+  color: var(--color-elemet-blue);
+}
 
 @media all and (max-width:800px) {
   * {
