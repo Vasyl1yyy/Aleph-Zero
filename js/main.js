@@ -29,14 +29,18 @@ close.onclick = () => {
 
 for (let i = 0; i < errorCloseButtons.length; i++) {
   errorCloseButtons[i].addEventListener('click', () => {
-    block.style.display = 'none';
-    console.log(4);
+    block.style.opacity = '0'
+    setTimeout(function() {
+      block.style.display = 'none';
+    },200)
   });
 }
 
 for (let i = 0; i < error.length; i++) {
   error[i].addEventListener('click', () => {
     block.style.display = 'flex';
-    console.log(2);
+    setTimeout(function() {
+      block.style.opacity = '1'
+    },200)
   });
 }
